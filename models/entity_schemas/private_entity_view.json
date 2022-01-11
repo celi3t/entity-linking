@@ -1,0 +1,11 @@
+{"person_id": "int",
+"first_names_hash": ["str"],
+"middle_names_hash": ["str"],
+"dob_hash": "datetime",
+"ssn_hash": "str",
+"addresses_hash": ["str"],
+"cities_hash": ["str"],
+"zipcodes_hash": ["str"],
+"phone_numbers_hash": ["str"],
+"service_data": "str"
+}

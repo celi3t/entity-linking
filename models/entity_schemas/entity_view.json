@@ -1,0 +1,12 @@
+{"person_id": "int",
+"service_dates": ["datetime"],
+"first_names": ["str"],
+"middle_names": ["str"],
+"dob": "datetime",
+"ssn": "str",
+"addresses": ["str"],
+"cities": ["str"],
+"zipcodes": ["str"],
+"phone_numbers": ["str"],
+"service_data": "str"
+}

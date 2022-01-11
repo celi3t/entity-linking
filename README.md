@@ -9,6 +9,22 @@ The code in this repo is a proof of concept for an end-to-end Master Data Manage
 
 ### Repo Structure:
 
+```
+entity-linking
+│   README.md 
+│
+└───datasets
+│       simulate_entities.py
+│   
+└───evaluation
+│       metrics.py
+│   
+└───models
+        bloom.ipynb
+        preprocessing.py
+        main_pyspark.ipynb
+```
+
 #### datasets:
 Util to simulate entities. Uses `Faker` to simulate names and other personal information.
 Noise in names is added in the following ways:
@@ -18,7 +34,6 @@ Noise in names is added in the following ways:
 * 2 reported last names in one dataset, only one last name in the other
 * todo: duplicate entries with mismatching information
 
-
 #### evaluation:
 Metrics used to evaluate models
 * confusion matrix
@@ -26,10 +41,10 @@ Metrics used to evaluate models
 * ROC curve
 * Hash collisions rates (which in ER are equivalent to false positives rates)
 
-
 #### models:
 Contains the actual name cleaning, dedup-ing, and hashing algorithms.
 Algorithms are inspired by the following papers (will likely add more):
+* [Multi-Party Privacy-Preserving Record Linkage using Bloom Filters](https://arxiv.org/pdf/1612.08835.pdf)
 * [Optimizing Bloom Filter: Challenges, Solutions, and Comparisons](https://arxiv.org/pdf/1804.04777.pdf)
 * [Scalable Multi-Database Privacy-Preserving Record Linkage using Counting Bloom Filters](https://arxiv.org/pdf/1701.01232.pdf)
 
