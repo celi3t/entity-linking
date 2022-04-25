@@ -1,0 +1,16 @@
+{"fields" : [{
+    "field_origin": "first_name",
+    "field_name": "name_phonetic",
+    "preprocess_steps": ["drop_chars", "sort", "phonetic"],
+    "matching_type": "string",
+    "ngrams": true,
+    "weight": 0.5},
+    {
+    "field_origin": "ssn",
+    "field_name": "ssn_clean",
+    "preprocess_steps": ["drop_chars"],
+    "matching_type": "exact",
+    "ngrams": false,
+    "weight": 0.5
+    }]
+  }
