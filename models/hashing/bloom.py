@@ -2,22 +2,14 @@ import pandas as pd
 import bitarray
 import mmh3
 
-def bloom_hash(size, hash_count, item):
+
+def bloom_hash(item, size, hash_count):
     bit_array = bitarray.bitarray(size)
     bit_array.setall(0)
     for ii in range(hash_count):
         index = mmh3.hash(item, ii) % size
         bit_array[index] = 1
-    return bit_array
-
-# def bloom_hash(item, size, hash_count):
-#     bit_array = bitarray.bitarray(size)
-#     bit_array.setall(0)
-#     for ii in range(hash_count):
-#         index = mmh3.hash(item, ii) % size
-#         bit_array[index] = 1
-#     return bytes(bit_array)
-
+    return bytes(bit_array)
 
 # similarity coefficient
 def sum_digits(bits):

@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+hashed_output*
+
+
 # Distribution / packaging
 .Python
 build/
